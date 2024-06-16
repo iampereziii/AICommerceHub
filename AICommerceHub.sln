@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICommerceHub.Web", "AIComm
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICommerceHub.Data", "AICommerceHub.Data\AICommerceHub.Data.csproj", "{CA69EC80-1D74-4E6F-8D2B-57835127C596}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICommerceHub.Domain", "AICommerceHub.Domain\AICommerceHub.Domain.csproj", "{79EFBE88-C622-4F8F-9B16-5960EF330874}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{CA69EC80-1D74-4E6F-8D2B-57835127C596}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA69EC80-1D74-4E6F-8D2B-57835127C596}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA69EC80-1D74-4E6F-8D2B-57835127C596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79EFBE88-C622-4F8F-9B16-5960EF330874}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79EFBE88-C622-4F8F-9B16-5960EF330874}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79EFBE88-C622-4F8F-9B16-5960EF330874}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79EFBE88-C622-4F8F-9B16-5960EF330874}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
