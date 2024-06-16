@@ -16,4 +16,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AICommerceHub.Domain\AICommerceHub.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

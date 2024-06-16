@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AICommerceHub.Domain.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 namespace AICommerceHub.Data.Context
@@ -13,6 +14,8 @@ namespace AICommerceHub.Data.Context
         : base(options)
         {
         }
+
+        DbSet<Product> Products { get; set; }
 
     }
 }
