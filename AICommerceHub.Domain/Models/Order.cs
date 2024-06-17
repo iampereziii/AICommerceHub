@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AICommerceHub.Domain.Models.NewFolder;
 
 namespace AICommerceHub.Domain.Models
 {
@@ -14,7 +15,15 @@ namespace AICommerceHub.Domain.Models
         public int Id { get; set; }
 
         [Required]
-        public string Client { get; set; }
+        public required string CustomerName { get; set; }
+
+        [Required]
+        public DateTime? OrderDate { get; set; }
+
+
+        public DateTime? PotentialShipDate { get; set; }
+
+        public enum OrderStatus { Pack = 0, Ship = 1, Deliveered = 2 }
 
         [Required]
         [Range(1, 100)]
@@ -24,6 +33,9 @@ namespace AICommerceHub.Domain.Models
 
         [Required]
         [ForeignKey(nameof(Product_Id))]
-        public Product Product { get; set; }
+        public required Product Product { get; set; }
+
+
+        public double TotalAmount { get; set; }
     }
 }
