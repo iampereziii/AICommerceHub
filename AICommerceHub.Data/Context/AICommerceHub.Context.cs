@@ -16,6 +16,8 @@ namespace AICommerceHub.Data.Context
         }
 
         DbSet<Product> Products { get; set; }
+        DbSet<Order> Orders { get; set; }
+
 
     }
 }
