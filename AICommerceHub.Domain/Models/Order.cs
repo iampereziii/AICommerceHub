@@ -11,11 +11,30 @@ namespace AICommerceHub.Domain.Models
 {
     public class Order
     {
+        public Order(int id, string customerName, string customerEmail, DateTime? orderDate, DateTime? potentialShipDate, int quantity, int product_Id, Product product, double totalAmount)
+        {
+            Id = id;
+            CustomerName = customerName;
+            CustomerEmail = customerEmail;
+            OrderDate = orderDate;
+            PotentialShipDate = potentialShipDate;
+            Quantity = quantity;
+            Product_Id = product_Id;
+            Product = product;
+            TotalAmount = totalAmount;
+        }
+
+        public Order()
+        {
+        }
+
         [Key]
         public int Id { get; set; }
 
         [Required]
         public required string CustomerName { get; set; }
+
+        public string CustomerEmail { get; set; }
 
         [Required]
         public DateTime? OrderDate { get; set; }
@@ -37,5 +56,16 @@ namespace AICommerceHub.Domain.Models
 
 
         public double TotalAmount { get; set; }
+
+        public override bool Equals(object? obj)
+        {
+            return obj is Order order &&
+                   CustomerEmail == order.CustomerEmail;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(CustomerEmail);
+        }
     }
 }
