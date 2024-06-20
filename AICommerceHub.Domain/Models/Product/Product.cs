@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AICommerceHub.Domain.Models.NewFolder
+namespace AICommerceHub.Domain.Models.Product
 {
     public class Product : IProduct
     {

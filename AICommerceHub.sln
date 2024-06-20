@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.10.34916.146
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICommerceHub.Web", "AICommerceHub.Web\AICommerceHub.Web.csproj", "{4E9AD55F-A847-43CF-B248-6EC3F8F86E07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AICommerceHub.Web", "AICommerceHub.Web\AICommerceHub.Web.csproj", "{4E9AD55F-A847-43CF-B248-6EC3F8F86E07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICommerceHub.Data", "AICommerceHub.Data\AICommerceHub.Data.csproj", "{CA69EC80-1D74-4E6F-8D2B-57835127C596}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AICommerceHub.Data", "AICommerceHub.Data\AICommerceHub.Data.csproj", "{CA69EC80-1D74-4E6F-8D2B-57835127C596}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICommerceHub.Domain", "AICommerceHub.Domain\AICommerceHub.Domain.csproj", "{79EFBE88-C622-4F8F-9B16-5960EF330874}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AICommerceHub.Domain", "AICommerceHub.Domain\AICommerceHub.Domain.csproj", "{79EFBE88-C622-4F8F-9B16-5960EF330874}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AICommerceHub.Service", "AICommerceHub.Service\AICommerceHub.Service.csproj", "{11D12D9D-A673-4A34-B8D3-31D33100165F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{79EFBE88-C622-4F8F-9B16-5960EF330874}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{79EFBE88-C622-4F8F-9B16-5960EF330874}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{79EFBE88-C622-4F8F-9B16-5960EF330874}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11D12D9D-A673-4A34-B8D3-31D33100165F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11D12D9D-A673-4A34-B8D3-31D33100165F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11D12D9D-A673-4A34-B8D3-31D33100165F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11D12D9D-A673-4A34-B8D3-31D33100165F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
