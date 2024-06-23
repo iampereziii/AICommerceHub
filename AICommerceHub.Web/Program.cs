@@ -1,4 +1,6 @@
 using AICommerceHub.Data.Context;
+using AICommerceHub.Service.Contract;
+using AICommerceHub.Service.Implementation;
 using AICommerceHub.Web.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -14,6 +16,13 @@ builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<AICommerceHubContext>();
 builder.Services.AddControllersWithViews();
+
+
+//Services
+
+builder.Services.AddScoped<IOrderService, OrderService>();
+
+
 
 var app = builder.Build();
 
