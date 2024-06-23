@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AICommerceHub.Domain.Models.Product
+namespace AICommerceHub.Domain.Models.ProductModel
 {
     internal interface IProduct
     {

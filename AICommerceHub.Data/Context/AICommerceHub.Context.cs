@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AICommerceHub.Domain.Models;
-using AICommerceHub.Domain.Models.NewFolder;
+using AICommerceHub.Domain.Models.ProductModel;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 namespace AICommerceHub.Data.Context

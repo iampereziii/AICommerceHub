@@ -1,4 +1,4 @@
-﻿using AICommerceHub.Domain.Models.Product;
+﻿using AICommerceHub.Domain.Models.ProductModel;
 using AICommerceHub.Service.Contract;
 using System;
 using System.Collections.Generic;

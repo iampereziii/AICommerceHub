@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AICommerceHub.Domain.Models.NewFolder;
+using AICommerceHub.Domain.Models.ProductModel;
 
 namespace AICommerceHub.Domain.Models
 {
