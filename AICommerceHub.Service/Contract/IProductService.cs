@@ -1,4 +1,4 @@
-﻿using AICommerceHub.Domain.Models.ProductModel;
+﻿using AICommerceHub.Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

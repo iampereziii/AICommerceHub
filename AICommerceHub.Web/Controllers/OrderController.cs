@@ -13,7 +13,6 @@ namespace AICommerceHub.Web.Controllers
     {
 
 
-        IOrderService orderSrevice;
 
         public OrderController() { }
 

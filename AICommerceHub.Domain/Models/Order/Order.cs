@@ -5,11 +5,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AICommerceHub.Domain.Models.ProductModel;
 
 namespace AICommerceHub.Domain.Models
 {
-    public class Order
+    public class Order : IOrder
     {
         public Order(int id, string customerName, string customerEmail, DateTime? orderDate, DateTime? potentialShipDate, int quantity, int product_Id, Product product, double totalAmount)
         {
@@ -34,7 +33,7 @@ namespace AICommerceHub.Domain.Models
         [Required]
         public required string CustomerName { get; set; }
 
-        public string CustomerEmail { get; set; }
+        public string? CustomerEmail { get; set; }
 
         [Required]
         public DateTime? OrderDate { get; set; }
