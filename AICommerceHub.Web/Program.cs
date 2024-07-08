@@ -21,7 +21,7 @@ builder.Services.AddControllersWithViews();
 //Services
 
 builder.Services.AddScoped<IOrderService, OrderService>();
-
+builder.Services.AddScoped<IProductService, ProductService>();
 
 
 var app = builder.Build();

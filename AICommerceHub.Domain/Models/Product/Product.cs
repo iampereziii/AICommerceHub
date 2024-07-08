@@ -10,9 +10,8 @@ namespace AICommerceHub.Domain.Models
     public class Product : IProduct
     {
 
-        public Product(int id, string name, string description, short stock, decimal price, string category, string imageUrl, DateTime createdDate, DateTime modifiedDate)
+        public Product(string name, string description, short stock, decimal price, string category, string imageUrl, DateTime createdDate, DateTime modifiedDate)
         {
-            Id = id;
             Name = name;
             Description = description;
             Stock = stock;
@@ -27,10 +26,10 @@ namespace AICommerceHub.Domain.Models
         public int Id { get; set; }
 
         [Required]
-        public required string Name { get; set; }
+        public string Name { get; set; }
 
         [Required]
-        public required string Description { get; set; }
+        public string Description { get; set; }
 
         [Required]
         [Range(0, 100)]

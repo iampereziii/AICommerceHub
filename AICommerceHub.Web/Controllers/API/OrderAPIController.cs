@@ -1,20 +1,21 @@
 ﻿using AICommerceHub.Service.Contract;
 using AICommerceHub.Service.Implementation;
+
 //using Microsoft.AspNetCore.Components;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace AICommerceHub.Web.Controllers
+namespace AICommerceHub.Web.Controllers.API
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class OrderController : ControllerBase
+    public class OrderAPIController : ControllerBase
     {
 
 
 
-        public OrderController() { }
+        public OrderAPIController() { }
 
 
 
