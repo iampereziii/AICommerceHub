@@ -83,7 +83,7 @@ obj/
 node_modules/
 
 # Web
-wwwroot/lib/
+
 wwwroot/node_modules/
 dist/
 build/
