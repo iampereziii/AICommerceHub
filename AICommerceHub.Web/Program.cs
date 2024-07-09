@@ -17,6 +17,8 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<AICommerceHubContext>();
 builder.Services.AddControllersWithViews();
 
+//TODO - add auto mapper later
+
 
 //Services
 

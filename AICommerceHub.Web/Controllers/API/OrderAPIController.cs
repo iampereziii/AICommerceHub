@@ -1,4 +1,6 @@
-﻿using AICommerceHub.Service.Contract;
+﻿using AICommerceHub.Data.Context;
+using AICommerceHub.Domain.Models;
+using AICommerceHub.Service.Contract;
 using AICommerceHub.Service.Implementation;
 
 //using Microsoft.AspNetCore.Components;
@@ -8,14 +10,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AICommerceHub.Web.Controllers.API
 {
-    [Route("api/[controller]")]
+    [Route("api/order")]
     [ApiController]
     public class OrderAPIController : ControllerBase
     {
 
+        AICommerceHubContext context;
 
-
-        public OrderAPIController() { }
+        public OrderAPIController(AICommerceHubContext context) {
+            this.context = context;
+        
+        }
 
 
 
@@ -36,8 +41,13 @@ namespace AICommerceHub.Web.Controllers.API
 
         // POST api/<OrderController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public void Post(int productId)
         {
+            Order order = new Order("","",DateTime.Now,null,1,productId,35);
+
+            context.Add<Order>(order);
+            context.SaveChanges();
+
         }
 
         // PUT api/<OrderController>/5
