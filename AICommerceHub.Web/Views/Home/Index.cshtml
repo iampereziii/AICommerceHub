@@ -1,46 +1,34 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-
-<header class="jumbotron jumbotron-fluid  text-center bg-primary">
-    <div class="container">
-        <h1 class="display-4">About Cheese Garlic Ordering System</h1>
-        <p class="lead">Welcome to Cheese Garlic Ordering System, where we bring you the finest cheeses and garlics from around the world right to your doorstep.</p>
-    </div>
-</header>
-
-<section class="container py-5">
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Our Story</h2>
-            <p>Founded with a passion for cheese and garlic, our journey began in a small kitchen with big dreams. We started by sourcing the best ingredients and crafting unique blends that captivate the senses.</p>
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Place Your Order</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
         </div>
-        <div class="col-md-6">
-            <h2>Order Form</h2>
-            <form>
-                <div class="form-group">
-                    <label for="productSelect">Select Product:</label>
-                    <select class="form-control" id="productSelect" name="product">
-                        <option value="cheese">Cheese</option>
-                        <option value="garlic">Garlic</option>
-                        <option value="combo">Cheese & Garlic Combo</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="quantityInput">Quantity:</label>
-                    <input type="number" class="form-control" id="quantityInput" name="quantity" min="1" value="1">
-                </div>
-                <div class="form-group">
-                    <label for="nameInput">Your Name:</label>
-                    <input type="text" class="form-control" id="nameInput" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="emailInput">Your Email:</label>
-                    <input type="email" class="form-control" id="emailInput" name="email" required>
-                </div>
-                <button type="submit" class="btn btn-primary">Place Order</button>
-            </form>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
         </div>
-    </div>
-</section>
+        <div class="form-group">
+            <label for="address">Address</label>
+            <textarea class="form-control" id="address" rows="3" placeholder="Enter your address" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="product">Product</label>
+            <select class="form-control" id="product" required>
+                <option value="" disabled selected>Select a product</option>
+                <option value="product1">Product 1</option>
+                <option value="product2">Product 2</option>
+                <option value="product3">Product 3</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity</label>
+            <input type="number" class="form-control" id="quantity" placeholder="Enter quantity" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit Order</button>
+    </form>
+</div>
