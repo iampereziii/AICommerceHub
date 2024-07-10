@@ -1,3 +1,4 @@
+using AICommerceHub.Service.Implementation;
 using AICommerceHub.Web.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
@@ -15,6 +16,10 @@ namespace AICommerceHub.Web.Controllers
 
         public IActionResult Index()
         {
+            AiService aiService = new AiService();
+            String html = aiService.GenerateHTML();
+
+            ViewData["HtmlContent"] = html;
             return View();
         }
 
