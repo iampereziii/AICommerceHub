@@ -44,18 +44,14 @@ namespace AICommerceHub.Web.Controllers.API
         {
             try
             {
-                Product product =  mapper.Map<ProductDTO, Product>(value);
+                Product product = mapper.Map<ProductDTO, Product>(value);
                 this.productService.AddProduct(product);
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
-
-                
                 throw;
             }
-
-
         }
 
         // PUT api/<ProductController>/5

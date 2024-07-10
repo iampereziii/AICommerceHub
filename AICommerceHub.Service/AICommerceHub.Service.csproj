@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="OpenAI" Version="2.0.0-beta.7" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\AICommerceHub.Data\AICommerceHub.Data.csproj" />
     <ProjectReference Include="..\AICommerceHub.Domain\AICommerceHub.Domain.csproj" />
   </ItemGroup>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using OpenAI;
+using OpenAI.Chat;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,9 +12,22 @@ namespace AICommerceHub.Service.Implementation
     {
 
 
-        public String GenerateHTML()
+        public void testCompletion()
         {
 
+
+            OpenAIClientOptions clientOptions = new OpenAIClientOptions() { OrganizationId = "org-vUV9ltygQxgun9tfnDh5rjMO" };
+
+            ChatClient client = new(model: "gpt-4o", credential: Environment.GetEnvironmentVariable("OPENAI_API_KEY"), clientOptions);
+
+            ChatCompletion completion = client.CompleteChat("Say random word");
+
+            Console.WriteLine($"[ASSISTANT]: {completion}");
+        }
+
+        public String GenerateHTML()
+        {
+            testCompletion();
             string htmlString = @"
                 <div class='container mt-5'>
                     <h1 class='text-center mb-4'>Place Your Order</h1>
