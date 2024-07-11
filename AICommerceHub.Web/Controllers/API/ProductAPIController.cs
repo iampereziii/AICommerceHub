@@ -40,7 +40,7 @@ namespace AICommerceHub.Web.Controllers.API
 
         // POST api/<ProductController>
         [HttpPost]
-        public void Post([FromBody] ProductDTO value)
+        public void Post([FromForm]ProductDTO value)
         {
             try
             {
