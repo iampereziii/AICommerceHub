@@ -37,9 +37,9 @@ namespace AICommerceHub.Service.Implementation
             SystemChatMessage systemChatMessage = new SystemChatMessage("You are a Senior Front-end developer.");
             SystemChatMessage techPrommpt = new SystemChatMessage("Consider this schema: " + jsonBody);
             SystemChatMessage form = new SystemChatMessage("POST should be /api/product/");
+
+
             UserChatMessage userChatMessage = new UserChatMessage("Create an html about add product with pure bootstrap only without any custom styling. Don't include any explanations in your responses.");
-
-
             UserChatMessage prompt = new UserChatMessage("Theme should be aesthetic.");
 
 
