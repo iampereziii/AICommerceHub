@@ -10,16 +10,14 @@ namespace AICommerceHub.Domain.Models
 {
     public class Order : IOrder
     {
-        public Order(int id, string customerName, string customerEmail, DateTime? orderDate, DateTime? potentialShipDate, int quantity, int product_Id, Product product, double totalAmount)
+        public Order(string customerName, string customerEmail, DateTime? orderDate, DateTime? potentialShipDate, int quantity, int product_Id, double totalAmount)
         {
-            Id = id;
             CustomerName = customerName;
             CustomerEmail = customerEmail;
             OrderDate = orderDate;
             PotentialShipDate = potentialShipDate;
             Quantity = quantity;
             Product_Id = product_Id;
-            Product = product;
             TotalAmount = totalAmount;
         }
 
@@ -31,7 +29,7 @@ namespace AICommerceHub.Domain.Models
         public int Id { get; set; }
 
         [Required]
-        public required string CustomerName { get; set; }
+        public string CustomerName { get; set; }
 
         public string? CustomerEmail { get; set; }
 
@@ -51,7 +49,7 @@ namespace AICommerceHub.Domain.Models
 
         [Required]
         [ForeignKey(nameof(Product_Id))]
-        public required Product Product { get; set; }
+        public Product Product { get; set; }
 
 
         public double TotalAmount { get; set; }

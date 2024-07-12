@@ -10,6 +10,12 @@ namespace AICommerceHub.Domain.Models
     public class Product : IProduct
     {
 
+        public Product()
+        {
+            CreatedDate = DateTime.Now;
+            ModifiedDate = DateTime.Now;
+
+        }
         public Product(string name, string description, short stock, decimal price, string category, string imageUrl, DateTime createdDate, DateTime modifiedDate)
         {
             Name = name;
@@ -39,7 +45,7 @@ namespace AICommerceHub.Domain.Models
 
         public string ImageUrl { get; set; }
 
-        public DateTime CreatedDate { get; set ; }
-        public DateTime ModifiedDate { get ; set; }
+        public DateTime CreatedDate { get; set; }
+        public DateTime ModifiedDate { get; set; }
     }
 }

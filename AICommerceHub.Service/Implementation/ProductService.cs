@@ -13,7 +13,6 @@ namespace AICommerceHub.Service.Implementation
     public class ProductService : IProductService
     {
 
-        Logger<ProductService> logger;
         private AICommerceHubContext _context;
 
         private Product _product;
@@ -34,7 +33,6 @@ namespace AICommerceHub.Service.Implementation
             }
             catch (Exception ex)
             {
-                logger.Log(LogLevel.Error, "Error:{}", ex);
                 return false;
             }
 

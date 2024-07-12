@@ -1,5 +1,8 @@
-﻿using AICommerceHub.Domain.Models;
+﻿using AICommerceHub.Domain.DTOs;
+using AICommerceHub.Domain.Models;
+using AICommerceHub.Service;
 using AICommerceHub.Service.Contract;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -11,11 +14,13 @@ namespace AICommerceHub.Web.Controllers.API
     public class ProductAPIController : ControllerBase
     {
 
+        IMapper mapper;
         IProductService productService;
 
-        public ProductAPIController(IProductService productService)
+        public ProductAPIController(IProductService productService, IMapper mapper)
         {
             this.productService = productService;
+            this.mapper = mapper;
         }
 
 
@@ -35,9 +40,18 @@ namespace AICommerceHub.Web.Controllers.API
 
         // POST api/<ProductController>
         [HttpPost]
-        public void Post([FromBody] Product value)
+        public void Post([FromForm]ProductDTO value)
         {
-            this.productService.AddProduct(value);
+            try
+            {
+                Product product = mapper.Map<ProductDTO, Product>(value);
+                this.productService.AddProduct(product);
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
         // PUT api/<ProductController>/5

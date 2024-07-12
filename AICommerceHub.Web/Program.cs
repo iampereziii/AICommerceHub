@@ -1,7 +1,9 @@
 using AICommerceHub.Data.Context;
+using AICommerceHub.Domain.Mapping;
 using AICommerceHub.Service.Contract;
 using AICommerceHub.Service.Implementation;
 using AICommerceHub.Web.Data;
+using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -17,12 +19,12 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<AICommerceHubContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 //Services
 
 builder.Services.AddScoped<IOrderService, OrderService>();
 builder.Services.AddScoped<IProductService, ProductService>();
-
 
 var app = builder.Build();
 
