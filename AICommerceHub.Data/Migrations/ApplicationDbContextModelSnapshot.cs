@@ -57,7 +57,7 @@ namespace AICommerceHub.Web.Data.Migrations
 
                     b.HasIndex("Product_Id");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("AICommerceHub.Domain.Models.Product", b =>
@@ -98,7 +98,7 @@ namespace AICommerceHub.Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
