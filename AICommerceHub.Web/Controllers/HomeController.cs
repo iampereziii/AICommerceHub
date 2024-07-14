@@ -16,10 +16,10 @@ namespace AICommerceHub.Web.Controllers
 
         public IActionResult Index()
         {
-            AiService aiService = new AiService();
-            String html = aiService.GenerateHTML();
+            //AiService aiService = new AiService();
+            //String html = aiService.GenerateHTML();
 
-            ViewData["HtmlContent"] = html;
+            //ViewData["HtmlContent"] = html;
             return View();
         }
 
